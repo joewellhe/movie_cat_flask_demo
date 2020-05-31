@@ -1,0 +1,17 @@
+{% extends  'common/layout.html' %}
+{% block content %}
+    YEAH YEAH YEAH
+    <p>var name = {{ name }}</p>
+    {% if user %}
+        nick = {{ user.nickname }}
+        qq = {{ user.qq }}
+    {% endif%}
+
+    {% for num in numlist %}
+        {{ num }} <br>
+    {% endfor %}
+
+    {% for res in result %}
+        {{ res.host }} ==== {{ res.user }}
+    {% endfor %}
+{% endblock %}
