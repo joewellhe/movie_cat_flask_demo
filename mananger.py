@@ -12,10 +12,11 @@ def print_info():
 
 
 manager.add_command('print', print_info)
+from job.launcher import JobLaunch
+manager.add_command('runjob', JobLaunch)
 
 
 def main():
-
     manager.run()
 
 
@@ -27,6 +28,6 @@ if __name__ == "__main__":
     try:
         import sys
         sys.exit(main())
-    except Exception:
+    except Exception as e:
         import traceback
         traceback.print_exc()
